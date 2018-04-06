@@ -1,0 +1,109 @@
+@import 'config';
+
+// greyscale palette
+$color-grey_lighter: #f5f5f5;
+$color-pale_grey: #e3e2e8;
+$color-cool_grey:#adabb7;
+$color-grey_purple: #747183;
+$color-grey_font: #474747;
+$color_charcoal_grey: #3e3a51;
+
+//ui colors
+$color-blue_info: #30c2f2;
+
+
+// breaks
+$sm: 360px;
+
+
+.u-hslform__combo-label {
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  color: $color-grey_purple;
+  font-size: 14px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out 0ms, opacity 300ms ease-in-out 100ms;
+
+  @media only screen and (max-width: $sm) {
+    font-size: 11px;
+    left: 11px;
+    top: 9px;
+  }
+}
+
+.u-hslform__combo-field {
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border: 1px solid;
+  border-color: $color-pale_grey;
+  border-radius: 2px;
+  color: $color_charcoal_grey;
+  padding: 28px 16px 9px 16px;
+  font-size: 18px;
+  transition-property: border-color, box-shadow, padding;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  @media only screen and (max-width: $sm) {
+    font-size: 15px;
+    padding: 21px 11px 7px 11px;
+  }
+
+  &::placeholder {
+    color: transparent;
+    transition: color 300ms linear 100ms;
+  }
+
+  &:focus {
+    border-color: $color-blue_info;
+    box-shadow: 0 0 2px 0 transparentize($color-blue_info, 0.5);
+  }
+
+}
+
+.u-hslform__combo {
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+
+  @media only screen and (max-width: $sm) {
+    margin-bottom: 8px;
+  }
+
+  &--is-empty {
+    .u-hslform__combo-label {
+      transform: translateY(14px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 300ms ease-in-out 100ms, opacity 300ms ease-in-out 0ms;
+
+      @media only screen and (max-width: $sm) {
+        transform: translateY(14px);
+      }
+    }
+
+    .u-hslform__combo-field {
+      padding: 19px 16px 18px 16px;
+      transition-delay: 100ms;
+
+      @media only screen and (max-width: $sm) {
+        padding: 14px 11px 14px 11px;
+      }
+
+      &::placeholder {
+        color: $color-cool_grey;
+        transition: color 300ms linear 0ms;
+      }
+    }
+  }
+
+}
+

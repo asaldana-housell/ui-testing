@@ -1,0 +1,98 @@
+//COLORS
+
+$color-primary_light: #4990E2;
+$color-primary: #1C335A;
+$color-primary_hover: #0a1f42;
+
+$color-secondary_light: #D78E9D;
+$color-secondary: #E30935;
+$color-secondary_hover: #A90829;
+
+$color-alt: #0EB8AD;
+$color-alt_hover: #0C827A;
+
+$color-text: #60636A;
+$color-error: #900;
+
+$color-greyscale_lightest: #F5F6F8;
+$color-greyscale_lighter: #E3E7E7;
+$color-greyscale_light: #BAC1CD;
+$color-greyscale: #8D99AC;
+$color-greyscale_dark: #77859C;
+
+$color-cta-green: #449853;
+$color-cta-green_hover: #347540;
+$color-cta-orange: #da7a26;
+$color-cta-orange_hover: #af621e;
+
+//RADIUS
+$border-radius: 3px;
+
+//FONTS
+$font-main: Roboto, sans-serif;
+
+// SPACES
+$space-bigger: 80px;
+$space-big: 50px;
+$space: 30px;
+$space-medium: 20px;
+$space-small: 12px;
+
+
+
+//NEW VARIABLES FOR NEW WEB overwritting others
+$color-primary: #7454cf;
+$color-primary_dark: #4f3a8e;
+$color-primary_darker: #40299d;
+$color-primary_light: #a782ff;
+$color-primary_lighter: #f8f5ff;
+
+$color-secondary: #30c2f2;
+$color-secondary_darkest: #2b0e9e;
+
+$color-grey: #666666;
+$color-grey_dark: #474747;
+$color-grey_light: #f5f5f5;
+
+$color-white: #ffffff;
+
+$color-prominent: #cfe50d;
+
+$border-radius: 4px;
+$max-width-container: 1200px;
+
+$max-height-query-valuation: 568px;
+$valuation-break-point: 480px;
+
+
+//BASE
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  @supports (-ms-ime-align:auto) {
+      overflow-x: hidden !important;
+  }
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-main;
+  color: $color-grey;
+  position: relative;
+  margin: 0;
+  // padding-bottom: 186px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+strong {
+  font-weight: 500;
+  color: $color-grey_dark;
+}
