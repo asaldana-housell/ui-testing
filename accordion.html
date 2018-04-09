@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/accordion.css">
+  <title>Accordion</title>
+</head>
+<body>
+  
+  <section class="container">
+    <ul class="accordion">
+      <li class="accordion__item">
+        <input id="radio1" type="radio" name="planes" class="accordion__input-radio" >
+        <label for="radio1" class="accordion__label">
+          <div class="accordion__intro">
+            <div class="accordion__title">
+                Plan Housell <span class="accordion_price-in-title">(945€)</span>
+              </div>
+              <div class="accordion__right">
+                <span class="accordion_price-text">desde</span>
+                <span class="accordion_price">945€</span>
+              </div>
+              <div class="accordion__text">Todo lo necesario para vender tu casa. <a href="#" target="_blank" class="accordion__link">más info</a> </div>
+          </div>
+          <div class="accordion__description">
+            <div class="accordion__description-box">
+              <ul class="accordion__upsell-container">
+                  <li class="accordion__upsell-item">
+                    <input id="check3" type="checkbox" class="accordion__upsell-input">
+                    <label for="check3" class="accordion__upsell-label">
+                      <div class="accordion__upsell-title"> Pack confort <span class="accordion__upsell-price-in-title">(+399€)</span></div>
+                      <div class="accordion__upsell-right">+99€</div>
+                      <div class="accordion__upsell-text"> Enseñamos tu casa por tí <a href="#" target="_blank" class="accordion__upsell-link">más info</a></div>
+                    </label>
+                  </li>
+                  <li class="accordion__upsell-item">
+                    <input id="check4" type="checkbox" class="accordion__upsell-input">
+                    <label for="check4" class="accordion__upsell-label">
+                      <div class="accordion__upsell-title"> Pack seguridad <span class="accordion__upsell-price-in-title">(+399€)</span></div>
+                      <div class="accordion__upsell-right">+399€</div>
+                      <div class="accordion__upsell-text"> Enseñamos tu casa por tí <a href="#" target="_blank" class="accordion__upsell-link">más info</a></div>
+                    </label>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </label>
+      </li>
+      <li class="accordion__item">
+        <input id="radio2" type="radio" name="planes" class="accordion__input-radio" >
+        <label for="radio2" class="accordion__label">
+          <div class="accordion__intro">
+            <div class="accordion__title">
+                Plan Básico <span class="accordion_price-in-title">(945€)</span>
+              </div>
+              <div class="accordion__right">
+                <span class="accordion_price-text">desde</span>
+                <span class="accordion_price">945€</span>
+              </div>
+              <div class="accordion__text">Promoción en más de 40 portales. <a href="#" target="_blank" class="accordion__link">más info</a> </div>
+          </div>
+          <div class="accordion__description">
+            <div class="accordion__description-box">
+              <ul class="accordion__upsell-container">
+                  <li class="accordion__upsell-item">
+                    <input id="check1" type="checkbox" class="accordion__upsell-input">
+                    <label for="check1" class="accordion__upsell-label">
+                      <div class="accordion__upsell-title"> Pack confort <span class="accordion__upsell-price-in-title">(+399€)</span></div>
+                      <div class="accordion__upsell-right">+399€</div>
+                      <div class="accordion__upsell-text"> Enseñamos tu casa por tí <a href="#" target="_blank" class="accordion__upsell-link">más info</a></div>
+                    </label>
+                  </li>
+                  <li class="accordion__upsell-item">
+                    <input id="check2" type="checkbox" class="accordion__upsell-input">
+                    <label for="check2" class="accordion__upsell-label">
+                      <div class="accordion__upsell-title"> Pack confort <span class="accordion__upsell-price-in-title">(+399€)</span></div>
+                      <div class="accordion__upsell-right">+399€</div>
+                      <div class="accordion__upsell-text"> Enseñamos tu casa por tí <a href="#" target="_blank" class="accordion__upsell-link">más info</a></div>
+                    </label>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </label>
+      </li>
+
+    </ul>
+  </section>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('input.accordion__input-radio').change( function() {
+
+        let itemDescription = $(this).siblings('.accordion__label').find('.accordion__description-box');
+        let itemIntro = $(this).siblings('.accordion__label').find('.accordion__intro');
+        
+        itemDescription.parent().css( "max-height", itemDescription.outerHeight(false) + itemIntro.outerHeight(false) + 'px');
+        
+        $(this).parent().siblings().each( function() {
+          $(this).find('.accordion__description').css('max-height', '0px');
+        })
+      })
+    })
+
+  </script>
+
+</body>
+</html>

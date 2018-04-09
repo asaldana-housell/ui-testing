@@ -1,0 +1,254 @@
+@import 'config';
+
+// greyscale palette
+$color-grey_lighter: #f5f5f5;
+$color-pale_grey: #e3e2e8;
+$color-cool_grey:#adabb7;
+$color-grey_purple: #747183;
+$color-grey_font: #474747;
+$color_charcoal_grey: #3e3a51;
+
+//ui colors
+$color-blue_info: #30c2f2;
+
+//other
+$boxshadow-main: 0 4px 18px 0 transparentize($color-cool_grey, 0.7);
+
+// breaks
+$sm: 320px;
+
+.accordion__title {
+  font-size: 20px;
+  margin-right: auto;
+  font-weight: 900;
+  @media only screen and (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.accordion_price-in-title {
+  font-weight: 400;
+}
+
+.accordion__right {
+  font-size: 20px;
+  margin-right: 8px;
+  font-weight: 900;
+  opacity: 0;
+  @media only screen and (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.accordion__text {
+  padding: 4px 8px 0px 36px;
+  @media only screen and (max-width: 320px) {
+    padding-top: 2px;
+  }
+}
+
+.accordion_price-text {
+  font-weight: 700;
+  font-size: 14px;
+  @media only screen and (max-width: 320px) {
+    font-size: 12px;
+  }
+}
+
+.accordion__link {
+  font-weight: 400;
+  white-space: nowrap;
+  color: $color-primary;
+}
+
+.accordion__label {
+  cursor: pointer;
+  color: $color-grey_purple;
+  background-color: white;
+  box-sizing: border-box;
+  display: block;
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.accordion__intro {
+  padding: 16px 8px 16px 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 320px) {
+    padding: 12px 4px 12px 4px;
+  }
+
+  &::before {
+    content: url(../img/radio-empty.svg);
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-right: 12px;
+  }
+}
+
+.accordion__description-box {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.accordion__input-radio:checked ~ .accordion__label {
+  cursor: default;
+  background-color: $color-primary;
+  color: white;
+  border-color: transparent;
+  .accordion__description-box { opacity: 1 }
+  .accordion__intro {
+    &::before { content: url(../img/radio-filled-inverse.svg); }
+  }
+  .accordion__link { color: white !important; }
+  .accordion__right { opacity: 1; }
+  .accordion_price-in-title { opacity: 0; }
+} 
+
+.accordion__input-radio {
+  display: none;
+}
+
+.accordion__item {
+  border-bottom: 2px solid $color-grey_lighter;
+
+  &:first-child {
+    .accordion__label {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+  &:last-child {
+    border-bottom: none;
+    .accordion__label {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  &--collapsed {
+    opacity: 0.75;
+  }
+}
+
+.accordion {
+  font-size: 16px;
+  background-color: white;
+  padding: 0;
+  list-style: none;
+  border-radius: 3px;
+  box-shadow: $boxshadow-main;
+  @media only screen and (max-width: 320px) {
+    font-size: 13px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 448px;
+  padding: 16px;
+}
+
+//Description expanded
+.accordion__description {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+  transition: max-height 600ms cubic-bezier(0.67, -0.01, 0.25, 1), opacity 300ms linear;
+}
+
+//Upsells
+
+.accordion__upsell-container {
+  // margin-top: 16px;
+  padding: 0px 8px 8px 8px;
+  box-sizing: border-box;
+  list-style: none;
+  width: 100%;
+}
+
+.accordion__upsell-item {
+  margin-bottom: 8px;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0px,
+  }
+}
+
+.accordion__upsell-input {
+  display: none;
+}
+
+.accordion__upsell-label {
+  padding: 8px;
+  box-sizing: border-box;
+  display: block;
+  background-color: white;
+  color: $color-primary;
+  border-radius: 3px;
+  transition-property: background-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  
+
+  &::before {
+    content: url(../img/check-empty.svg);
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+  }
+}
+
+.accordion__upsell-link {
+  font-weight: 400;
+  white-space: nowrap;
+  color: $color-primary;
+}
+
+.accordion__upsell-title {
+  font-weight: 900;
+  margin-right: auto;
+  @media only screen and (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.accordion__upsell-price-in-title {
+  font-weight: 400;
+  opacity: 1;
+}
+
+.accordion__upsell-right {
+  font-weight: 900;
+  opacity: 0;
+  @media only screen and (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.accordion__upsell-text {
+  padding-left: 28px;
+}
+
+.accordion__upsell-input:checked ~ .accordion__upsell-label {
+  background-color: transparentize(white, 0.85);
+  color: white;
+  cursor: default;
+  .accordion__upsell-price-in-title { opacity: 0; }
+  .accordion__upsell-right { opacity: 1; }
+  .accordion__upsell-link { color: white; }
+  &::before { content: url(../img/check-filled-inverse.svg); }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/combo-inputs.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form class="u-hslform" action="index.html" method="post" style="max-width: 416px; margin: 0 auto; padding: 16px;">
+    <div class="u-hslform__combo u-hslform__combo--is-empty">
+      <label class="u-hslform__combo-label">Nombre y apellidos</label>
+      <input type="text" class="u-hslform__combo-field" placeholder="Nombre y apellidos">
+    </div>
+    <div class="u-hslform__combo u-hslform__combo--is-empty">
+      <label class="u-hslform__combo-label">Correo electrónico</label>
+      <input type="text" class="u-hslform__combo-field" placeholder="Correo eléctronico">
+    </div>
+    <div class="u-hslform__combo">
+      <label class="u-hslform__combo-label u-hslform__combo--is-empty">Teléfono</label>
+      <input type="text" class="u-hslform__combo-field" placeholder="Teléfono" value="123 12 12 21">
+    </div>
+  </form>
+
+</body>
+
+  <script> </script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+
+  <script src="_js/main.js"></script>
+
+  <script>
+      $('.u-hslform__combo-field').keyup( function() {
+      if (this.value === "" ) {
+        $(this).parent().addClass('u-hslform__combo--is-empty');
+      } else {
+        $(this).parent().removeClass('u-hslform__combo--is-empty');
+        }
+      })
+  </script>
+
+</html>

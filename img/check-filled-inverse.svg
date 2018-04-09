@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>check-filled-inverse</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Checkout-[Prototype-+-Stylebook]" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Checkout-/-Stylebook" transform="translate(-66.000000, -680.000000)">
+            <g id="Group" transform="translate(50.000000, 506.000000)">
+                <g id="Stacked-Group">
+                    <g id="Group-3-Copy-3">
+                        <g id="Stacked-Group-2" transform="translate(8.000000, 102.000000)">
+                            <g id="item" transform="translate(0.000000, 64.000000)">
+                                <g id="Group-12" transform="translate(8.000000, 7.000000)">
+                                    <g id="00_UI-Kit-/-o-form-/-00_symbols-/-checkbox-/-checkbox-small-/-checked-inverse" transform="translate(0.000000, 1.000000)">
+                                        <rect id="check" fill="#FFFFFF" fill-rule="evenodd" x="0" y="0" width="16" height="16" rx="2"></rect>
+                                        <path d="M13.1998431,5.7 L7.49028801,11.4095551 C7.29028801,11.6095551 7.09028801,11.7095551 6.79028801,11.7095551 C6.49028801,11.7095551 6.29028801,11.6095551 6.09028801,11.4095551 L3.3,8.61926706 C2.9,8.21926706 2.9,7.61926706 3.3,7.21926706 C3.7,6.81926706 4.3,6.81926706 4.7,7.21926706 L6.79028801,9.30955508 L11.7998431,4.3 C12.1998431,3.9 12.7998431,3.9 13.1998431,4.3 C13.5998431,4.7 13.5998431,5.3 13.1998431,5.7 Z" id="chevron" fill="#7454CF" fill-rule="nonzero" transform="translate(8.249922, 7.854778) rotate(-360.000000) translate(-8.249922, -7.854778) "></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
